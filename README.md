@@ -1,10 +1,10 @@
 # To run project- open cmd/terminat
-## docker-compose up --build
+### docker-compose up --build
 
-## To Dockerize a Django Project--
+### To Dockerize a Django Project--
 
-## create a file "Dockerfile"
-## create a file "docker-compose.yml"
+### create a file "Dockerfile"
+### create a file "docker-compose.yml"
 
 create a directory "scripts"
 inside "scripts" directory create a file "entrypoint.sh"
@@ -16,7 +16,7 @@ to build image inside the docker, run command in the current directory terminal
 Example of Docker version control command---
 
 docker build -t registry:latest .
-docker push registry:latest
+`docker push registry:latest`
 
 
 docker tag registry:latest registry:2
