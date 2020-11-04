@@ -1,10 +1,10 @@
 # To run project- open cmd/terminat
 ## docker-compose up --build
 
-##To Dockerize a Django Project--
+## To Dockerize a Django Project--
 
-create a file "Dockerfile"
-create a file "docker-compose.yml"
+## create a file "Dockerfile"
+## create a file "docker-compose.yml"
 
 create a directory "scripts"
 inside "scripts" directory create a file "entrypoint.sh"
