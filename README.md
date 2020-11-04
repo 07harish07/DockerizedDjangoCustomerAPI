@@ -1,5 +1,5 @@
 ## To run project- open cmd/terminat
-### docker-compose up --build
+# docker-compose up --build
 
 To Dockerize a Django Project--
 
