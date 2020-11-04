@@ -1,7 +1,7 @@
-## To run project- open cmd/terminat
-# docker-compose up --build
+# To run project- open cmd/terminat
+## docker-compose up --build
 
-To Dockerize a Django Project--
+##To Dockerize a Django Project--
 
 create a file "Dockerfile"
 create a file "docker-compose.yml"
