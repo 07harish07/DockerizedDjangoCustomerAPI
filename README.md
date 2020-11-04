@@ -36,7 +36,7 @@ docker tag registry:latest registry 2.6.3
 
 Docker commands---
 
-##1. `docker –version`
+1. `docker –version`
 
 This command is used to get the currently installed version of docker
 
