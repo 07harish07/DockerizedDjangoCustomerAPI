@@ -13,9 +13,8 @@ services:
             - "8000:8000"
         volumes: 
             #synchronize app directory
-            - ./CustomerAPI:/app
+            - .:/app
         # run server listening on all ip address on docker and map it to port 8000,
         # which is inturn forwarded to port 8000 on host machine
-        command: sh -c "python manage.py runserver 0.0.0.0:8000"
-        environment: 
-            - DEBUG=1
+        command: python CustomerAPI/manage.py runserver 0.0.0.0:8000
+        restart: always

@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,12 +25,13 @@ SECRET_KEY = '17(#k_#py!+f$kc8qyc@f3%%$-3zp=6#@a5m44%f#&j7on=4t='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cutomerdemo.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,8 +90,12 @@ WSGI_APPLICATION = 'CustomerAPI.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'customer_db',
+        'USER': 'admin',
+        'PASSWORD': 'Mentis8800',
+        'HOST': 'customer-db.cxcdfbixe8vl.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
@@ -153,5 +157,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-# Activate Heroku settings for Django
-django_heroku.settings(locals())
